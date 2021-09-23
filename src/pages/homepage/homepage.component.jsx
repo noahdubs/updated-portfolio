@@ -2,33 +2,29 @@ import React from 'react'
 
 import './homepage.styles.css'
 
-import man from '../../assets/man-in-suit.png'
+import Landing from '../../components/landing/landing.component'
+import About from '../../components/about/about.component'
+import Projects from '../../components/projects/projects.component'
 
 import Navbar from '../../components/navbar/navbar.component'
 
 const Homepage = () => {
+
+    const scrollToPart = partName => {
+        console.log(partName)
+        // let topPos = document.getElementById(partName).offsetTop
+        // window.scrollTo({top: topPos, behavior: 'smooth'})
+
+        let part = document.getElementById(partName)
+        part.scrollIntoView({behavior: 'smooth'})
+    }
+
     return (
-        <div className="homepage">
-            <Navbar page={'homepage'}/>
-            <div className="row homepage-row">
-                <div className="col-md-6">
-                    <h1>Noah Winkelman</h1>
-                    <img className="homepage-pic" src={man}/>
-                </div>
-                <div className="col-md-6">
-                    
-                </div>
-            </div>
-            <div className="animation-area">
-                <ul className="box-area">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
+        <div id="homepage">
+            <Navbar page={'homepage'} scrollToPart={scrollToPart} />
+            <Landing />
+            <About />
+            <Projects />
         </div>
     )
 }
