@@ -1,6 +1,6 @@
 .nav-custom {
     height: 100px;
-    background: transparent;
+    background-color: #202020;
     color: #757575;
     box-shadow: 0 8px 8px -5px #757575;
 }
@@ -20,7 +20,7 @@
 }
 .list-item:hover {
     text-decoration: none;
-    color: #D13838;
+    color:  #38D1d1;
     cursor: pointer;
 }
 .navbar-collapse {
@@ -29,11 +29,12 @@
 }
 
 #nav-toggler {
-    border: 1px solid #D13838 !important;
-    background-color: #D13838;
+    border: 1px solid  #38D1d1 !important;
+    background-color:  #38D1d1;
 }
-#nav-span {
-    background-color: #D13838;
+#nav-span i {
+    margin-top: 5px;
+    color: white;
 }
 
 
@@ -57,9 +58,8 @@
 
 @media screen and (max-width: 767px){
     .navbar-collapse {
-        background: white;
-        border: 1px solid #D13838;
-        border-top: none;
+        background: #202020;
+        border: 1px solid  #D13838;
         padding: 10px;
     }
     .collapse-landing {

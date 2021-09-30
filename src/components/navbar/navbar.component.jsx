@@ -8,7 +8,7 @@ const Navbar = ({page, scrollToPart}) => {
             <div className="container navbar-container sticky-top">
                 <li className="navbar-brand" id={page ? 'homepage-brand' : 'nav-brand'}>NW </li>
                 <button className="navbar-toggler border" id="nav-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon toggler" id="nav-span"></span>
+                    <span className="navbar-toggler-icon toggler" id="nav-span"><i class="fas fa-bars"></i></span>
                 </button> 
                 
                 <div className={`collapse navbar-collapse`} id="navbarSupportedContent">

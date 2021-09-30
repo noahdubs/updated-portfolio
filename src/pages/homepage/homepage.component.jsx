@@ -11,10 +11,6 @@ import Navbar from '../../components/navbar/navbar.component'
 const Homepage = () => {
 
     const scrollToPart = partName => {
-        console.log(partName)
-        // let topPos = document.getElementById(partName).offsetTop
-        // window.scrollTo({top: topPos, behavior: 'smooth'})
-
         let part = document.getElementById(partName)
         part.scrollIntoView({behavior: 'smooth'})
     }
