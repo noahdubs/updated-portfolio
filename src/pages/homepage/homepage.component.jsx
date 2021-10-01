@@ -2,11 +2,11 @@ import React from 'react'
 
 import './homepage.styles.css'
 
+import Navbar from '../../components/navbar/navbar.component'
 import Landing from '../../components/landing/landing.component'
 import About from '../../components/about/about.component'
-import Projects from '../../components/projects/projects.component'
-
-import Navbar from '../../components/navbar/navbar.component'
+import ProjectsCollection from '../../components/projects-collection/projects-collection.component'
+import Footer from '../../components/footer/footer.component'
 
 const Homepage = () => {
 
@@ -20,7 +20,8 @@ const Homepage = () => {
             <Navbar page={'homepage'} scrollToPart={scrollToPart} />
             <Landing />
             <About />
-            <Projects />
+            <ProjectsCollection />
+            <Footer />
         </div>
     )
 }

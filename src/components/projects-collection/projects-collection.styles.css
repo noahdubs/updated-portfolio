@@ -1,6 +1,5 @@
 #projects {
-    height: 1000px;
-    background-color: black;
+    background-color: #202020;
 }
 .projects-row {
     width: 80%;
@@ -9,12 +8,11 @@
     justify-content: space-between;
 }
 .projects-12 {
-    color: white;
-    font-size: 48px;
-    padding-bottom: 20px;
+    color: #38D1d1;
+    font-size: 40px;
+    padding: 40px 0 20px 0;
 }
 .projects-col {
-    border-radius: 10px;
     margin: 0;
     background-repeat: no-repeat;
     background-position: center;
@@ -25,6 +23,7 @@
     height: 300px;
     max-width: 49%;
     overflow: hidden;
+    border-radius: 10px;
 }
 .projects-hover {
     display: none;
@@ -34,9 +33,16 @@
     min-height: 100%;
     min-width: 110%;
     padding: 10px 5% 0 5%;
-    background-color: white;
-    border-radius: 10px;
+    background-color: rgba(22,22,22, 0.98);
+    color: white;
 }
-.fast-forecast-img {
-    display: none;
+   
+
+
+
+
+@media screen and (max-width: 992px) {
+    .projects-col {
+        max-width: 100%;
+    }
 }

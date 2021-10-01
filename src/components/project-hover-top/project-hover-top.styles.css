@@ -1,0 +1,36 @@
+.project-hov-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.project-name {
+    font-size: 20px;
+}
+.project-blue {
+    color: #38D1d1;
+
+}
+.project-red {
+    color: #D13838;
+
+}
+.project-info {
+    font-size: 14px;
+}
+.tech-used {
+    display: block;
+}
+.tech-used p {
+    font-size: 20px;
+}
+.icon-div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.icon-div p {
+    font-size: 15px;
+    margin: 5px 0 0 0;
+    color: white;
+}
