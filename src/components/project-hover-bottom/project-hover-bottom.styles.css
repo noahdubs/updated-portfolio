@@ -2,6 +2,8 @@
     bottom: 0;
     position: absolute;
     padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 .custom-button {
     background-color: transparent;
@@ -33,4 +35,39 @@
 }
 .project-icon {
     margin-left: 5px;
+}
+
+
+@media screen and (max-width: 1200px){
+    .custom-button a {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .custom-button a {
+        font-size: 14px;
+    }
+
+}
+@media screen and (max-width: 992px) {
+    .custom-button a {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 515px) {
+    .project-icon {
+        display: none;
+    }
+}
+@media screen and (max-width: 418px) {
+    .custom-button a {
+        padding: 3px;
+    }
+    .custom-button {
+        height: 30px;
+    }
+    .custom-button a {
+        font-size: 13px;
+    }
 }

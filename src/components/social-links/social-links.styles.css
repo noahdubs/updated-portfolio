@@ -1,0 +1,17 @@
+.social-links {
+    display: flex;
+    align-items: center;
+}
+.social-link {
+    color: white;
+    margin-left: 20px;
+    font-size: 28px;
+}
+.social-link:hover {
+    color: #38D1d1;
+}
+ @media screen and (max-width: 360px) {
+     .social-links {
+         justify-content: center;
+     }
+ }

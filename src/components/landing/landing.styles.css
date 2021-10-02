@@ -2,29 +2,110 @@
     height: 100vh;
     width: 100%;
     background-color: #202020;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .landing-content {
-    width: 100%;
-    height: 85%;
+    width: 50%;
+    margin-left: 15%;
+    height: 75%;
     position: absolute;
     display: flex;
     align-items: center;
-    justify-content: center;
     color: white;
     text-align: center;
     z-index: 1000;
 }
+.landing-text {
+    color: white;
+    position: absolute;
+    text-align: start;
+}
+
 .landing-h1 {
-    font-size: 84px;
-    margin: 0;
-    font-family: 'Yellowtail', cursive;
+    font-size: 80px;
+    margin: 0 0 10px 0;
     font-weight: 500;
 }
-.landing-h3 {
+.landing-p {
     margin: 0;
-    font-size: 40px;
-    font-family: 'Yellowtail', cursive;
-    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #B8B7B7;    
+}
+.landing-contact {
+    display: flex;
+    justify-content: space-between;
+}
+.landing-contact-info {
+    color: #D13838;
+    margin: 0;
+}
+.landing-link {
+    color: white;
+}
+.landing-link:hover {
+    color: #D13838;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1300px) {
+    .landing-h1 {
+        font-size: 70px;
+    }
+    .landing-p {
+        font-size: 16px;
+    }
+    .landing-contact {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .landing-content {
+        width: 60%;
+    }
+
+}
+@media screen and (max-width: 900px) {
+    .landing-content {
+        margin-left: 10%;
+        width: 70%;
+    }
+    .landing-h1 {
+        font-size: 55px;
+    }
+    .landing-p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .landing-content {
+        margin-left: 5%;
+        width: 90%;
+    }
+    /* .landing-h1 {
+        font-size: 50px;
+    } */
+}
+@media screen and (max-width: 470px) {
+    .landing-h1 {
+        font-size: 48px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .landing-contact {
+        display: inline;
+        text-align: center;
+    }
+}
+@media screeen and (max-width: 550px) {
+    .shapes li:nth-child(1){
+        left: 10%;
+        width: 600px;
+        height: 600px;
+        animation-delay: 0s;
+        background-color: #38D1d1;
+    }
+    
 }
 
 .area-for-animation {
@@ -47,7 +128,7 @@
     list-style: none;
     width: 20px;
     height: 20px;
-    background-color: #5B5B5B;
+    background-color: #5F5F5F;
     animation: animate 25s linear infinite;
     bottom: -150px;
     

@@ -2,6 +2,8 @@ import React from 'react'
 
 import './navbar.styles.css'
 
+import pdf from '../../assets/Resume.PDF'
+
 const Navbar = ({page, scrollToPart}) => {
     return (
         <nav className={`navbar nav-custom navbar-expand-md sticky-top ${page ? 'homepage-nav' : null}`}>
@@ -15,9 +17,8 @@ const Navbar = ({page, scrollToPart}) => {
                     <ul className="navbar-nav mr-auto"></ul>
                     <ul className="navbar-nav navbar-right">
                         <li className="list-item" onClick={() => scrollToPart("homepage")}>Home</li>
-                        <li className="list-item" onClick={() => scrollToPart("about")}> About</li>
                         <li className="list-item" onClick={() => scrollToPart("projects")}>Projects</li>
-                        <li className="list-item" id="Resume">Resume</li>
+                        <li className="list-item" id="Resume"><a href={pdf} className="resume-link">Resume</a></li>
                     </ul>
                 </div>
             </div>

@@ -36,8 +36,13 @@
     margin-top: 5px;
     color: white;
 }
-
-
+.resume-link {
+    color: white;
+}
+.resume-link:hover {
+    color: #38D1d1;
+    text-decoration: none;
+}
 
 /* homepage nav styles */
 .homepage-nav {
