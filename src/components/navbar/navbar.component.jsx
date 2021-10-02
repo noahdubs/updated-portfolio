@@ -1,4 +1,5 @@
 import React from 'react' 
+import { Link } from 'react-router-dom'
 
 import './navbar.styles.css'
 
@@ -18,7 +19,12 @@ const Navbar = ({page, scrollToPart}) => {
                     <ul className="navbar-nav navbar-right">
                         <li className="list-item" onClick={() => scrollToPart("homepage")}>Home</li>
                         <li className="list-item" onClick={() => scrollToPart("projects")}>Projects</li>
-                        <li className="list-item" id="Resume"><a href={require(pdf)} target="_blank" className="resume-link">Resume</a></li>
+                        <li className="list-item" id="Resume">
+                            <Link href={pdf} target="_blank" className="resume-link">
+                                Resume
+                            </Link>
+                            {/* <a href={pdf} target="_blank" className="resume-link">Resume</a> */}
+                        </li>
                     </ul>
                 </div>
             </div>
