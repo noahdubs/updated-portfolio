@@ -6,7 +6,7 @@ const FastForecast = ({showProjectInfo, showImage, weather0, styles, icons, exit
     return (
         <div className="col-lg-6 projects-col"  onMouseOver={() => showProjectInfo('fast-forecast-info')} 
                         onMouseLeave={showImage}
-                        style={{backgroundImage: `url("${weather0}")`}}        
+                        style={{background: `url("${weather0}") center/cover no-repeat`}}        
         >
             <div className={styles === 'fast-forecast-info' ? 'show-info' : 'projects-hover'} >
                 <ProjectHoverTop 
