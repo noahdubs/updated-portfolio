@@ -2,7 +2,7 @@ import React from 'react'
 
 import './navbar.styles.css'
 
-import pdf from '../../assets/Resume.PDF'
+import pdf from '../../assets/Resume.pdf'
 
 const Navbar = ({page, scrollToPart}) => {
     return (
@@ -18,7 +18,7 @@ const Navbar = ({page, scrollToPart}) => {
                     <ul className="navbar-nav navbar-right">
                         <li className="list-item" onClick={() => scrollToPart("homepage")}>Home</li>
                         <li className="list-item" onClick={() => scrollToPart("projects")}>Projects</li>
-                        <li className="list-item" id="Resume"><a href={pdf} className="resume-link">Resume</a></li>
+                        <li className="list-item" id="Resume"><a href={require(pdf)} target="_blank" className="resume-link">Resume</a></li>
                     </ul>
                 </div>
             </div>
