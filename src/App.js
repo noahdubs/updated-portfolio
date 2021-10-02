@@ -14,7 +14,7 @@ const App = () => {
 
 				<Route exact path="/resume" component={ResumePage} /> 
 
-				<Route path="/404" component={NotFound} />
+				<Route exact path="/404" component={NotFound} />
                 <Redirect to="/404" />
 			</Switch>
         	
