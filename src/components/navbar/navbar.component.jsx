@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 
 import './navbar.styles.css'
 
-import pdf from '../../assets/Resume.pdf'
-
 const Navbar = ({page, scrollToPart}) => {
     return (
         <nav className={`navbar nav-custom navbar-expand-md sticky-top ${page ? 'homepage-nav' : null}`}>
@@ -20,10 +18,7 @@ const Navbar = ({page, scrollToPart}) => {
                         <li className="list-item" onClick={() => scrollToPart("homepage")}>Home</li>
                         <li className="list-item" onClick={() => scrollToPart("projects")}>Projects</li>
                         <li className="list-item" id="Resume">
-                            <Link href={pdf} target="_blank" className="resume-link">
-                                Resume
-                            </Link>
-                            {/* <a href={pdf} target="_blank" className="resume-link">Resume</a> */}
+                            <Link to="/resume" className="resume-link">Resume</Link>
                         </li>
                     </ul>
                 </div>
