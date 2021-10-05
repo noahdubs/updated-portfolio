@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 
 import './projects-collection.styles.css'
 
@@ -12,7 +12,23 @@ import ArkasQuade from '../arkas-qaude/arkas-quade.component'
 import TotalFitness from '../total-fitness/total-fitness.component'
 import BurgerStop from '../burger-stop/burger-stop.component'
 
+const useMediaQuery = () => {
+    const [ screenSize, setScreenSize ] = useState([0, 0])
+
+    useLayoutEffect(() => {
+        const updateScreenSize = () => {
+            setScreenSize([window.innerWidth, window.innerHeight])
+        }
+        window.addEventListener("resize", updateScreenSize);
+        updateScreenSize();
+        return () => window.removeEventListener("resize", updateScreenSize);
+    }, []);
+
+    return screenSize
+}
+
 const ProjectsCollection = () => {
+    const [width] = useMediaQuery()
     const [styles, setStyles] = useState()
     const showProjectInfo = className => {
         setStyles(className)
@@ -38,6 +54,7 @@ const ProjectsCollection = () => {
                     showProjectInfo={showProjectInfo}
                     weather0={weather0}
                     icons={[icons[0], icons[3], icons[4]]}
+                    width={width}
                 />
                 <ArkasQuade 
                     showImage={showImage}
@@ -45,6 +62,7 @@ const ProjectsCollection = () => {
                     showProjectInfo={showProjectInfo}
                     arkas0={arkas0}
                     icons={icons.slice(0, 3)}
+                    width={width}
                 />
                 <TotalFitness 
                     showImage={showImage}
@@ -52,6 +70,7 @@ const ProjectsCollection = () => {
                     showProjectInfo={showProjectInfo}
                     workout0={workout0}
                     icons={icons.slice(0, 3)}
+                    width={width}
                 />
                 <BurgerStop 
                     showImage={showImage}
@@ -59,6 +78,7 @@ const ProjectsCollection = () => {
                     showProjectInfo={showProjectInfo}
                     burger0={burger0}
                     icons={[icons[1], icons[2], icons[5]]}
+                    width={width}
                 />
             </div>
         </div>
