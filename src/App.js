@@ -4,7 +4,6 @@ import {Switch, Route} from 'react-router-dom'
 
 import Homepage from './pages/homepage/homepage.component'
 import ResumePage from './pages/resume-page/resume-page.component'
-import NotFound from './pages/not-found/not-found.component'
 
 const App = () => {
 	return (
@@ -14,7 +13,6 @@ const App = () => {
 
 				<Route exact path="/resume" component={ResumePage} /> 
 
-				<Route component={NotFound} />
 			</Switch>
         	
     	</div>
