@@ -1,7 +1,7 @@
 import React from 'react' 
 
 import './resume-page.styles.css'
-import pdf from '../../assets/Resume.pdf';
+import pdf from '../../Resume.pdf';
 
 const ResumePage = () => {
     return (
