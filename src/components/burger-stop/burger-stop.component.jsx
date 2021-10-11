@@ -4,12 +4,13 @@ import ProjectHoverTop from '../project-hover-top/project-hover-top.component'
 
 
 
-const BurgerStop = ({showImage, showProjectInfo, styles, burger0, icons}) => {
+const BurgerStop = ({showImage, showProjectInfo, styles, burger0, icons, width}) => {
+    let mobileHeight = width * .58
     return (
         <div className="col-lg-6 projects-col"
             onMouseOver={() => showProjectInfo('burger-stop-info')} 
             onMouseLeave={showImage}
-            style={{backgroundImage: `url("${burger0}")`}}
+            style={{background: `url("${burger0}") center/cover no-repeat`, height: `${width > 992 ? (mobileHeight / 2.5) : mobileHeight}px`}}       
         >
             <div className={styles === 'burger-stop-info' ? 'show-info' : 'projects-hover'} >
                 <ProjectHoverTop 
