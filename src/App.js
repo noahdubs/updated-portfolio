@@ -1,6 +1,6 @@
 import React from 'react'
 import './app.css'
-import {Switch, Route, Redirect} from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom'
 
 import Homepage from './pages/homepage/homepage.component'
 import ResumePage from './pages/resume-page/resume-page.component'
@@ -14,8 +14,7 @@ const App = () => {
 
 				<Route exact path="/resume" component={ResumePage} /> 
 
-				<Route exact path="/404" component={NotFound} />
-                <Redirect to="/404" />
+				<Route component={NotFound} />
 			</Switch>
         	
     	</div>
